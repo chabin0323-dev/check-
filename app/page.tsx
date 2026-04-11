@@ -12,26 +12,24 @@ export default function Home() {
       padding: '20px'
     }}>
       <div style={{ maxWidth: '500px', width: '100%' }}>
-        {/* コンセプト画像を一番上に表示 */}
+        {/* 三宅様提出画像：コンセプト */}
         <img src="/app_concept.png" style={{ width: '100%', borderRadius: '15px', marginBottom: '20px' }} alt="concept" />
         
-        {/* 新しいキャッチコピー */}
-        <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px', lineHeight: '1.4' }}>
+        <h2 style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '16px', lineHeight: '1.4' }}>
           二人の未来が具体的に見える！<br />
           今だけ開かれる特別価格の扉！
         </h2>
         
-        {/* 黄金のボタン（image_7.png）をPayPalリンクとして配置 */}
-        <a href="https://www.paypal.com/ncp/payment/PPGD76J8JB8ZQ" target="_blank" rel="noreferrer" style={{ display: 'block', outline: 'none' }}>
-          <img src="/image_7.png" style={{ width: '90%', maxWidth: '380px', cursor: 'pointer', transition: 'transform 0.2s' }} alt="button" className="golden-button" />
+        {/* 三宅様提出画像：黄金のボタン（Paypalリンク） */}
+        <a href="https://www.paypal.com/ncp/payment/PPGD76J8JB8ZQ" target="_blank" rel="noreferrer">
+          <img src="/image_7.png" style={{ width: '90%', maxWidth: '380px', cursor: 'pointer' }} alt="黄金のボタン" />
         </a>
 
-        {/* 価格表示 */}
         <p style={{ fontWeight: 'bold', fontSize: '26px', color: '#ff4da6', margin: '25px 0' }}>
           使い放題 780円
         </p>
 
-        {/* PayPal決済対応ブランド一覧 */}
+        {/* 三宅様提出画像：カードブランド */}
         <div style={{ background: 'white', padding: '15px', borderRadius: '12px', marginTop: '20px' }}>
           <p style={{ color: '#333', fontSize: '12px', marginBottom: '10px', fontWeight: 'bold' }}>安心のPayPal決済に対応</p>
           <img src="/cards.png" style={{ width: '100%', maxWidth: '300px' }} alt="cards" />
