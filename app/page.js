@@ -6,7 +6,7 @@ export default function Home() {
         <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '24px', lineHeight: '1.6', color: '#ffffff', textAlign: 'center' }}>
           二人の未来が具体的に見える！<br />今だけ開かれる特別価格の扉！
         </h2>
-        <a href="https://www.paypal.com/ncp/payment/PPGD76J8JB8ZQ" target="_blank" rel="noreferrer" style={{ display: 'block', textAlign: 'center' }}>
+        <a href=href="https://www.paypal.com/ncp/payment/AMEJ4V5C564UN" target="_blank" rel="noreferrer" style={{ display: 'block', textAlign: 'center' }}>
           <img src="/image_7.png" style={{ width: '100%', maxWidth: '360px', borderRadius: '12px' }} alt="button" />
         </a>
         <p style={{ fontWeight: 'bold', fontSize: '24px', color: '#ff4da6', margin: '20px 0', textAlign: 'center' }}>使い放題 780円</p>
