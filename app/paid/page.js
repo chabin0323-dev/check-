@@ -1,12 +1,16 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function PaidPage() {
   const paypalRef = useRef(null);
   const rendered = useRef(false);
+  const [isLine, setIsLine] = useState(false);
 
   useEffect(() => {
+    // LINE内ブラウザ判定
+    setIsLine(navigator.userAgent.toLowerCase().includes('line'));
+
     if (rendered.current) return;
 
     const script = document.createElement('script');
@@ -37,7 +41,6 @@ export default function PaidPage() {
         },
         onApprove: function (data, actions) {
           return actions.order.capture().then(function (details) {
-            // 決済完了後サンクスページへ
             window.location.href = '/thanks';
           });
         },
@@ -49,9 +52,6 @@ export default function PaidPage() {
     };
     document.body.appendChild(script);
   }, []);
-
-  // LINE内ブラウザ判定
-  const isLine = typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().includes('line');
 
   function copyUrl() {
     const url = window.location.href;
@@ -175,6 +175,7 @@ export default function PaidPage() {
           padding: 4px 8px;
           font-size: 11px;
           font-weight: 700;
+          color: #333;
         }
         .secure-note {
           font-size: 11px;
@@ -212,7 +213,7 @@ export default function PaidPage() {
             <p>安心のPayPal決済に対応</p>
             <div className="logos-row">
               {['VISA','Mastercard','JCB','AMEX','Diners','Discover'].map(b => (
-                <div key={b} className="logo-badge" style={{color:'#333'}}>{b}</div>
+                <div key={b} className="logo-badge">{b}</div>
               ))}
             </div>
             <p className="secure-note">🔒 SSL暗号化通信で安全に決済</p>
@@ -222,4 +223,3 @@ export default function PaidPage() {
     </>
   );
 }
-
